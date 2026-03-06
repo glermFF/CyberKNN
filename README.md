@@ -1,9 +1,9 @@
-# Classificação e Previsão de Ciberataques com IA (K-NN)
+# Classificação e Previsão de Ciberataques com ML
 
 ## Sobre
 Este projeto de Ciência de Dados tem como objetivo analisar e classificar incidentes cibernéticos globais utilizando a base de dados do EuRepoC (European Repository of Cyber Incidents). Através do algoritmo de Machine Learning K-NN, o modelo é capaz de prever o tipo de um ataque cibernético (ex: *Data theft, Disruption, Hijacking*) com base em suas características de origem, alvo e método de atribuição.
 
-O projeto foi desenvolvido com forte foco em boas práticas de modelagem, prevenção de vazamento de dados e avaliação robusta em bases desbalanceadas.
+O projeto foi desenvolvido com forte foco em boas práticas de modelagem, prevenção de vazamento de dados e avaliação robusta em bases desbalanceadas. Outros modelos além do K-NN serão testados por aqui.
 
 ---
 
@@ -29,16 +29,22 @@ O modelo campeão foi avaliado através de **Cross-Validation com 5 Folds** em 1
 
 ---
 
-## Principais Resultados
+## Resultados dos Testes
 
-* Acurácia Realista: O modelo obteve uma acurácia global consistente (~60%) após a Validação Cruzada em toda a base.
-* Diagnóstico de Desbalanceamento: Através da Matriz de Confusão, foi possível auditar o comportamento da IA. O modelo apresentou alta performance (bons F1-Scores) para as classes majoritárias como Data theft (Roubo de Dados) e Disruption (Interrupção). 
-* Limitações do Mundo Real: Como a base possui pouquíssimos registros de Hijacking (Sequestro), o modelo reflete essa limitação do mundo real, priorizando respostas estatisticamente mais prováveis em situações de dúvida.
+**Teste 06/03/26**
+* Novas colunas de interesse adicionadas para ajudar um pouco na granularidade: 4 >>> 6.
+* Incremento na precisão pelo Teste Simples: ~68% >>> ~72%.
+* Incremento na precisão por Validação Cruzada: ~65% >>> ~68%.
+
+**Teste 04/03/26**
+* Remoção dos tipos de ataques menos recorrentes (Hijacking) deixando a apenas duas mais recorrentes Data theft e Disruption.
+* Simplificação das colunas de interesse: 17 >>> 4.
+* Incremento na precisão pelo Teste Simples: ~68%.
+* Incremento na precisão por Validação Cruzada: ~60% >>> ~65%.
+
+**Teste --/02/26**
+* Acurácia Realista: O modelo obteve uma acurácia global consistente (~60%) após a Validação Cruzada.
+* Diagnóstico de Desbalanceamento: Através da Matriz de Confusão, foi possível auditar o comportamento do modelo. Ele apresentou alta performance (bons F1-Scores) para as classes majoritárias como Data theft (Roubo de Dados) e Disruption (Interrupção).
+* Limitação dos Registros: Devido a forma do pré-processamento aplicada, os registros de Hijacking (Sequestro) o modelo apresentou limitação ao categorizar, priorizando respostas estatisticamente mais prováveis em situações de dúvida.
 
 **!!! O modelo apresentado ainda precisa de outras baterias de testes e definição das colunas de interesse correta para o problema a ser resolvido. Foram bons resultados mas apresentando grande desabalanceamento dos dados classificados !!!**
-
----
-
-## Logs
-
-**04/03/26** - Remoção dos tipos de ataques menos recorrentes (Hijacking) deixando a apenas duas | Simplificação das colunas de interesse: 17 -> 4 | Incremento na precisão: ~60% -> ~65%
