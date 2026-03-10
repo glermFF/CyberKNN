@@ -31,6 +31,13 @@ O modelo campeão foi avaliado através de **Cross-Validation com 5 Folds** em 1
 
 ## Resultados dos Testes
 
+**Teste 10/03/26**
+* Nova coluna de interesse adicionada: user_interaction | 6 >>> 7.
+* Adição dos incidentes menos recorrentes novamente: Hijacking with/without misuse | 2 >>> 4.
+* Aplicando técnica SMOTE para balanceamento da base de dados.
+* Decremento na precisão pelo Teste Simples: ~72% >>> ~45%.
+* Decremento na precisão por Validação Cruzada: ~65% >>> ~60%.
+
 **Teste 06/03/26**
 * Novas colunas de interesse adicionadas para ajudar um pouco na granularidade: 4 >>> 6.
 * Incremento na precisão pelo Teste Simples: ~68% >>> ~72%.
