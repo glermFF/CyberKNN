@@ -3,7 +3,10 @@ project/.venv/bin
 project/.venv/lib
 project/.venv/lib64
 project/.venv/include
+project/.venv/share
 project/.venv/pyvenv.cfg
+
+**/dependencies.txt
 
 __pycache__/
 *.pyc
