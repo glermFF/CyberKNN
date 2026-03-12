@@ -1,6 +1,6 @@
 # Sobre
 
-Conjunto dos resultados obtidos após ajustes e testes feitos no modelo KNN buscando amelhor eficiência possível para analisar a base de dados.
+Conjunto dos resultados obtidos após ajustes e testes feitos no modelo KNN buscando a melhor eficiência possível para analisar a base de dados.
 
 ## Informações Gerais 
 
@@ -18,8 +18,6 @@ Colunas de Interesse Atuais: 7
 -------------------------------
 
 ## Testes e Resultados do Modelo:
-
-### KNN
 
 **TESTE 1**
 #---> Utilizando 17 colunas de interesse | 4 ataques principais:
